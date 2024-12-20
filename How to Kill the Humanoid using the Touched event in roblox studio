@@ -1,0 +1,11 @@
+local killBrick = script.Parent-- This is a varaiable called "killBrick" that finds the part you want to turn into the kill brick.
+
+
+killBrick.Touched:Connect (function(hit)
+	local humanoid = hit.Parent:FindFirstChild ("Humanoid")
+	if humanoid then 
+		humanoid.Health = 0
+	end
+end)
+
+-- Also make sure this script is actually in the  part you want to turn into the kill brick.
